@@ -4,10 +4,8 @@ let close = document.getElementById("button1")
 let donate = document.getElementById("button-donate")
 let html = document.documentElement;
 
-
-
 donate.addEventListener("click", function() {
-  window.location.href = "donate.html";
+  window.location.href = "/Donate/donate.html";
 });
 
 

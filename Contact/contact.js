@@ -10,11 +10,12 @@ const menu = document.getElementById('menu11');
 const closeBtn = document.getElementById('button1');
 const popup = document.getElementById('success-popup');
 const successClose = document.getElementById('success-close');
-let donate = document.getElementById("button-donate")
+let donate = document.getElementById("button-donate");
+const loadingSpinner = document.getElementById('loading-spinner');
 
 
 donate.addEventListener("click", function() {
-  window.location.href = "donate.html";
+  window.location.href = "/Donate/donate.html";
 });
 
 
@@ -54,13 +55,20 @@ if (form) {
       console.warn('Missing required fields:', submission);
       return;
     }
+    
+    // Show spinner before the async operation starts
+    loadingSpinner.style.display = 'flex'; 
 
     console.log('Attempting to insert:', submission);
 
     const { data, error } = await client.from('entries').insert([submission]);
+    
+    // Hide spinner immediately after the async operation completes (success or fail)
+    loadingSpinner.style.display = 'none'; 
 
     if (error) {
       console.error('Failed to send message:', error.message);
+      // You might want to show an error message here
       return;
     }
 
@@ -105,5 +113,3 @@ async function fetchMessages(limit = 50) {
   console.log('Fetched messages:', data);
   return data;
 }
-
-
