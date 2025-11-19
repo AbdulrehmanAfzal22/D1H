@@ -15,7 +15,7 @@ const loadingSpinner = document.getElementById('loading-spinner');
 
 
 donate.addEventListener("click", function() {
-  window.location.href = "/donate/donate.html";
+  window.location.href = "donate.html";
 });
 
 
@@ -56,19 +56,16 @@ if (form) {
       return;
     }
     
-    // Show spinner before the async operation starts
     loadingSpinner.style.display = 'flex'; 
 
     console.log('Attempting to insert:', submission);
 
     const { data, error } = await client.from('entries').insert([submission]);
     
-    // Hide spinner immediately after the async operation completes (success or fail)
     loadingSpinner.style.display = 'none'; 
 
     if (error) {
       console.error('Failed to send message:', error.message);
-      // You might want to show an error message here
       return;
     }
 

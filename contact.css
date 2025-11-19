@@ -77,7 +77,7 @@ body {
 
 
 .hero { 
-  background: url('/photos/OIP.png') center/cover no-repeat;
+  background: url('OIP.png') center/cover no-repeat;
   height: 50vh;
   display: flex;
   justify-content: center;

@@ -31,11 +31,7 @@ menu.addEventListener("click", function (event) {
 });
 
 
-  // if (donate) {
-  //   donate.addEventListener("click", () => {
-  //     window.location.href = "donate.html";
-  //   });
-  // }
+
 
   const footer = document.querySelector(".footer");
   window.addEventListener("scroll", () => {

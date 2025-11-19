@@ -12,11 +12,11 @@ let join = document.getElementById("join")
 
   
 donate.addEventListener("click", function() {
-  window.location.href = "/donate/donate.html";
+  window.location.href = "donate.html";
 });
 
 donate2.addEventListener("click", function() {
-  window.location.href = "/donate/donate.html";
+  window.location.href = "donate.html";
 });
 
 join.addEventListener("click", function() {
