@@ -1,37 +1,39 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // const donate = document.getElementById("button-donate");
-  const hamburger = document.getElementById("hamburger");
-  const menu = document.getElementById("menu11");
-  const close = document.getElementById("button1");
-  const html = document.documentElement;
+ 
 
- hamburger.addEventListener("click", function (event) {
-  event.stopPropagation(); 
-  if (menu.style.display === "block") {
-    menu.style.display = "none";
-  } else {
-    menu.style.display = "block";
-  }
+
+const navOverlay = document.getElementById("navOverlay");
+const hamburger = document.getElementById("hamburger");
+
+
+
+
+hamburger.addEventListener("click", function(event) {
+  event.stopPropagation();
+  navOverlay.classList.toggle("active");
+  hamburger.classList.toggle("active");
 });
 
 
-close.addEventListener("click", function (event) {
-  event.stopPropagation(); 
-  menu.style.display = "none";
+document.documentElement.addEventListener("click", function () {
+  navOverlay.classList.remove("active");
+  hamburger.classList.remove("active");
 });
 
 
-html.addEventListener("click", function () {
-  menu.style.display = "none"; 
+navOverlay.addEventListener("click", function(event) {
+  event.stopPropagation();
 });
 
-
-menu.addEventListener("click", function (event) {
-  event.stopPropagation(); 
+closeOverlay.addEventListener("click", () => {
+  navOverlay.classList.remove("active");
+  hamburger.classList.remove("active");
 });
 
-
-
+document.documentElement.addEventListener("click", () => {
+  navOverlay.classList.remove("active");
+  hamburger.classList.remove("active");
+});
 
   const footer = document.querySelector(".footer");
   window.addEventListener("scroll", () => {

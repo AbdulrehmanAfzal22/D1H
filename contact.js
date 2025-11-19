@@ -5,9 +5,6 @@ const client = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
 
 const form = document.getElementById('form');
-const hamburger = document.getElementById('hamburger');
-const menu = document.getElementById('menu11');
-const closeBtn = document.getElementById('button1');
 const popup = document.getElementById('success-popup');
 const successClose = document.getElementById('success-close');
 let donate = document.getElementById("button-donate");
@@ -20,25 +17,6 @@ donate.addEventListener("click", function() {
 
 
 
-if (hamburger && menu) {
-  hamburger.addEventListener('click', (event) => {
-    event.stopPropagation();
-    menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
-  });
-
-  if (closeBtn) {
-    closeBtn.addEventListener('click', (event) => {
-      event.stopPropagation();
-      menu.style.display = 'none';
-    });
-  }
-
-  document.addEventListener('click', (ev) => {
-    if (menu.style.display === 'block' && !menu.contains(ev.target) && ev.target !== hamburger) {
-      menu.style.display = 'none';
-    }
-  });
-}
 
 
 if (form) {
@@ -110,3 +88,42 @@ async function fetchMessages(limit = 50) {
   console.log('Fetched messages:', data);
   return data;
 }
+
+
+
+const navOverlay = document.getElementById("navOverlay");
+const hamburger = document.getElementById("hamburger");
+
+
+let donate3 = document.getElementById("donate")
+
+donate3.addEventListener("click", function() {
+  window.location.href = "donate.html";
+});
+
+hamburger.addEventListener("click", function(event) {
+  event.stopPropagation();
+  navOverlay.classList.toggle("active");
+  hamburger.classList.toggle("active");
+});
+
+
+document.documentElement.addEventListener("click", function () {
+  navOverlay.classList.remove("active");
+  hamburger.classList.remove("active");
+});
+
+
+navOverlay.addEventListener("click", function(event) {
+  event.stopPropagation();
+});
+
+closeOverlay.addEventListener("click", () => {
+  navOverlay.classList.remove("active");
+  hamburger.classList.remove("active");
+});
+
+document.documentElement.addEventListener("click", () => {
+  navOverlay.classList.remove("active");
+  hamburger.classList.remove("active");
+});

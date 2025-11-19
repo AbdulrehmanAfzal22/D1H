@@ -1,16 +1,10 @@
-let currentSlide = 0;
-let hamburger = document.getElementById("hamburger")
-let menu = document.getElementById("menu11")
-let close = document.getElementById("button1")
-let html = document.documentElement;
+
 let donate = document.getElementById("button-donate")
 const slides = document.querySelectorAll('.slide');
 let donate2 = document.getElementById("button-donate2")
 let join = document.getElementById("join")
 
 
-
-  
 donate.addEventListener("click", function() {
   window.location.href = "donate.html";
 });
@@ -19,33 +13,49 @@ donate2.addEventListener("click", function() {
   window.location.href = "donate.html";
 });
 
+
+
 join.addEventListener("click", function() {
   window.location.href = "contact.html";
 });
 
-hamburger.addEventListener("click", function (event) {
-  event.stopPropagation(); 
-  if (menu.style.display === "block") {
-    menu.style.display = "none";
-  } else {
-    menu.style.display = "block";
-  }
+
+
+const navOverlay = document.getElementById("navOverlay");
+const hamburger = document.getElementById("hamburger");
+
+
+let donate3 = document.getElementById("donate")
+
+donate3.addEventListener("click", function() {
+  window.location.href = "donate.html";
+});
+
+hamburger.addEventListener("click", function(event) {
+  event.stopPropagation();
+  navOverlay.classList.toggle("active");
+  hamburger.classList.toggle("active");
 });
 
 
-close.addEventListener("click", function (event) {
-  event.stopPropagation(); 
-  menu.style.display = "none";
+document.documentElement.addEventListener("click", function () {
+  navOverlay.classList.remove("active");
+  hamburger.classList.remove("active");
 });
 
 
-html.addEventListener("click", function () {
-  menu.style.display = "none"; 
+navOverlay.addEventListener("click", function(event) {
+  event.stopPropagation();
 });
 
+closeOverlay.addEventListener("click", () => {
+  navOverlay.classList.remove("active");
+  hamburger.classList.remove("active");
+});
 
-menu.addEventListener("click", function (event) {
-  event.stopPropagation(); 
+document.documentElement.addEventListener("click", () => {
+  navOverlay.classList.remove("active");
+  hamburger.classList.remove("active");
 });
 
 

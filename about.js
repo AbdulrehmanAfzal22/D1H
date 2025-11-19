@@ -1,9 +1,10 @@
-let hamburger = document.getElementById("hamburger")
-let menu = document.getElementById("menu11")
-let close = document.getElementById("button1")
-let donate = document.getElementById("button-donate")
-let html = document.documentElement;
 
+let donate3 = document.getElementById("donate")
+
+
+donate3.addEventListener("click", function() {
+  window.location.href = "donate.html";
+});
 
 
 donate.addEventListener("click", function() {
@@ -11,20 +12,37 @@ donate.addEventListener("click", function() {
 });
 
 
-hamburger.addEventListener("click", function (event) {
-  event.stopPropagation(); 
-  if (menu.style.display === "block") {
-    menu.style.display = "none";
-  } else {
-    menu.style.display = "block";
-  }
-});
-close.addEventListener("click", function (event) {
-  event.stopPropagation(); 
-  menu.style.display = "none";
+
+const navOverlay = document.getElementById("navOverlay");
+const hamburger = document.getElementById("hamburger");
+
+
+hamburger.addEventListener("click", function(event) {
+  event.stopPropagation();
+  navOverlay.classList.toggle("active");
+  hamburger.classList.toggle("active");
 });
 
 
-html.addEventListener("click", function () {
-  menu.style.display = "none"; 
+document.documentElement.addEventListener("click", function () {
+  navOverlay.classList.remove("active");
+  hamburger.classList.remove("active");
 });
+
+
+navOverlay.addEventListener("click", function(event) {
+  event.stopPropagation();
+});
+
+closeOverlay.addEventListener("click", () => {
+  navOverlay.classList.remove("active");
+  hamburger.classList.remove("active");
+});
+
+document.documentElement.addEventListener("click", () => {
+  navOverlay.classList.remove("active");
+  hamburger.classList.remove("active");
+});
+
+
+

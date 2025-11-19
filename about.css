@@ -762,3 +762,58 @@ nav ul a:hover li::after {
 html {
   scroll-behavior: smooth;
 }
+
+
+.nav-overlay {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background-color: #cce6ff; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  transition: left 0.5s ease;
+  z-index: 9999;
+}
+
+.nav-overlay.active {
+  left: 0;
+}
+
+.nav-overlay a {
+  text-decoration: none;
+  font-size: 2rem;
+  color: #194592;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.nav-overlay a:hover {
+  color: #f08084;
+}
+
+
+.hamburger.active::after {
+  content: "✕";
+  color: #194592;
+  font-size: 28px;
+}
+
+.button2{
+  width: 110px;
+  height: 38px;
+  font-size: 15px;
+  background-color: #f08084;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.button2:hover{
+  background-color: #0593d4;
+}
