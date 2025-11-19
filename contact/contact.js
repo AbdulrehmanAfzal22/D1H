@@ -15,7 +15,7 @@ const loadingSpinner = document.getElementById('loading-spinner');
 
 
 donate.addEventListener("click", function() {
-  window.location.href = "/Donate/donate.html";
+  window.location.href = "/donate/donate.html";
 });
 
 

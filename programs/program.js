@@ -5,7 +5,7 @@ let donate = document.getElementById("button-donate")
 let html = document.documentElement;
 
 donate.addEventListener("click", function() {
-  window.location.href = "/Donate/donate.html";
+  window.location.href = "/donate/donate.html";
 });
 
 
