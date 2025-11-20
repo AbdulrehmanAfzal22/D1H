@@ -59,6 +59,10 @@ document.documentElement.addEventListener("click", () => {
 });
 
 
+let currentSlide = 0;
+
+
+
 function changeSlide() {
   slides[currentSlide].classList.remove('active');
   currentSlide = (currentSlide + 1) % slides.length;
@@ -66,3 +70,12 @@ function changeSlide() {
 }
 
 setInterval(changeSlide, 10000); 
+
+
+const currentPage = window.location.pathname.split("/").pop();
+
+document.querySelectorAll("nav a, .nav-overlay a").forEach(link => {
+  if (link.getAttribute("href") === currentPage) {
+    link.classList.add("active");
+  }
+});

@@ -510,6 +510,8 @@ color: #194592;
 
 
 
+
+
   .join-us {
       display: flex;
       justify-content: space-between;
@@ -816,4 +818,23 @@ html {
 }
 .button2:hover{
   background-color: #0593d4;
+}
+
+.nav-links a.active {
+  color:#0593d4;  
+  font-weight: 700;
+  /* border-bottom: 2px solid white; */
+}
+
+.nav-links ul a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  padding: 8px 12px;
+  transition: all 0.3s ease;
+}
+
+.nav-links ul a li {
+  list-style: none;
+  transition: all 0.3s ease;
 }

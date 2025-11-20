@@ -1,4 +1,4 @@
-
+let donate = document.getElementById("button-donate")
 let donate3 = document.getElementById("donate")
 
 
@@ -46,3 +46,13 @@ document.documentElement.addEventListener("click", () => {
 
 
 
+
+
+
+const currentPage = window.location.pathname.split("/").pop();
+
+document.querySelectorAll("nav a").forEach(link => {
+    if (link.getAttribute("href") === currentPage) {
+        link.classList.add("active");
+    }
+});

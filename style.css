@@ -628,11 +628,11 @@ nav ul a:hover li::after {
   color: #ffd700;
 } */
 
-
+/* 
 .nav-links ul a.active li {
   color: #ffd700;
   border-bottom: 2px solid #ffd700;
-}
+} */
 
 html {
   scroll-behavior: smooth;
@@ -933,4 +933,16 @@ html {
 }
 .button2:hover{
   background-color: #0593d4;
+}
+
+.nav-links a.active {
+  color:#0593d4;  
+  font-weight: 700;
+ 
+}
+
+.nav-overlay a.active {
+    color: #ffffff;
+    font-weight: 700;
+
 }
