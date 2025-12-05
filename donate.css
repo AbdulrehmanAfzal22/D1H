@@ -34,7 +34,13 @@ body {
   gap: 40px;
   list-style: none;
 }
+.first{
+  color:  rgb(1, 1, 71);
 
+}
+.second{
+  color: #D7428D;
+}
 .nav-links a {
   color: white;
   text-decoration: none;
@@ -54,7 +60,7 @@ body {
   width: 110px;
   height: 38px;
   font-size: 15px;
-  background-color:#194592;
+   background-color:#077099;
   color:#194592;
   border: none;
   border-radius: 10px;
@@ -358,6 +364,8 @@ color: #0593d4;
 .btn:hover {
   transform: scale(1.05);
   transition: transform 0.3s ease;
+    color: white;
+
 }
 
 .overlay {
