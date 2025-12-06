@@ -60,7 +60,7 @@ body {
   width: 110px;
   height: 38px;
   font-size: 15px;
-   background-color:#077099;
+   background-color:#194592;
   color:#194592;
   border: none;
   border-radius: 10px;
@@ -362,10 +362,9 @@ color: #0593d4;
 
 
 .btn:hover {
-  transform: scale(1.05);
-  transition: transform 0.3s ease;
-    color: white;
-
+  /* transform: scale(1.05);
+  transition: transform 0.3s ease; */
+    color:#194592
 }
 
 .overlay {
