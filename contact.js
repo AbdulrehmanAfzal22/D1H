@@ -19,6 +19,7 @@ donate.addEventListener("click", function() {
 let index = 0;
 const slides = document.querySelectorAll('.slide');
 const totalSlides = slides.length;
+const infoBox = document.querySelector('.info'); // Get the info box
 
 const prevButton = document.querySelector('.prev');
 const nextButton = document.querySelector('.next');
@@ -29,7 +30,14 @@ function showSlide(n) {
   } else if (n < 0) {
     index = totalSlides - 1;
   }
+
+  // 1. Move the slider
   document.querySelector('.slider').style.transform = `translateX(${-index * 100}%)`;
+
+  // 2. Update the info box content
+  const currentSlide = slides[index];
+  const descriptionHtml = currentSlide.querySelector('.description').innerHTML;
+  infoBox.innerHTML = descriptionHtml;
 }
 
 prevButton.addEventListener('click', () => {
@@ -40,6 +48,11 @@ prevButton.addEventListener('click', () => {
 nextButton.addEventListener('click', () => {
   index++;
   showSlide(index);
+});
+
+// Show the first slide and its info on page load
+document.addEventListener('DOMContentLoaded', () => {
+    showSlide(index);
 });
 
 
@@ -96,7 +109,7 @@ if (form) {
       }
     });
 
-   
+    
     setTimeout(() => {
       popup.style.display = 'none';
     }, 3000);
