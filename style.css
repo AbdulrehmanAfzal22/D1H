@@ -167,51 +167,102 @@ body {
 
 
 
+
 .heading {
   text-align: center;
   margin-top: 60px;
-  color: #194592;
-  font-size: 2rem;
+  color: #2a3d66;
+  font-size: 3rem;  
+  font-weight: bold;
+  text-transform: uppercase;  
+  letter-spacing: 2px; 
+  margin-bottom: 50px;
+  font-family: 'Arial', sans-serif;
 }
+
 
 .cards {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 25px;
+  gap: 30px;
   flex-wrap: wrap;
   margin-top: 40px;
-  padding: 0 20px;
+  padding: 0 30px;
+  transition: all 0.3s ease;
 }
+
 
 .card {
-  background-color: #ffffff;
-  border-radius: 14px;
+  background: linear-gradient(145deg, #5d79d3, #194592);
+  border-radius: 20px;
   width: 350px;
-  height: 370px;
+  height: 420px;
   display: flex;
-  color: black;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  gap: 25px;
+  justify-content: space-evenly; 
+  gap: 20px;
   text-align: center;
-  border: 4px solid #194592;
-}
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
-}
-.card img {
-  border-radius: 12px;
-  width: 307px;
-  height: 220px;
-  object-fit: cover;
+  border: none; 
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); 
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, opacity 0.3s ease;
 }
 
-.card h2 {
-  color:#194592;
+
+.card:hover {
+  transform: translateY(-15px); 
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2); 
+  opacity: 0.95; 
 }
+
+.card img {
+  border-radius: 15px;
+  width: 90%; 
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.3s ease; 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+.card:hover img {
+  transform: scale(1.1); 
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25); 
+}
+
+
+.card h2 {
+  color: #ffffff;
+  font-size: 1.5rem; 
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+}
+
+/* Heading Hover Effect */
+.card:hover h2 {
+  color: #000000; 
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .cards {
+    gap: 20px;
+  }
+
+  .card {
+    width: 90%; 
+    height: 380px;
+  }
+
+  .heading {
+    font-size: 2.5rem; 
+  }
+}
+
+
 .menu1 {
     display: flex;
     flex-direction: column;

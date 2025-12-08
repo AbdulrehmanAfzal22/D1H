@@ -16,6 +16,37 @@ donate.addEventListener("click", function() {
 });
 
 
+let index = 0;
+const slides = document.querySelectorAll('.slide');
+const totalSlides = slides.length;
+
+const prevButton = document.querySelector('.prev');
+const nextButton = document.querySelector('.next');
+
+function showSlide(n) {
+  if (n >= totalSlides) {
+    index = 0;
+  } else if (n < 0) {
+    index = totalSlides - 1;
+  }
+  document.querySelector('.slider').style.transform = `translateX(${-index * 100}%)`;
+}
+
+prevButton.addEventListener('click', () => {
+  index--;
+  showSlide(index);
+});
+
+nextButton.addEventListener('click', () => {
+  index++;
+  showSlide(index);
+});
+
+
+// setInterval(() => {
+//   index++;
+//   showSlide(index);
+// }, 5000); 
 
 
 

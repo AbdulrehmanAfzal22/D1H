@@ -1,6 +1,10 @@
+    @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600;700&display=swap');
+
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      margin: 0;
+padding: 0;
+margin: 0;
+     font-family: "Josefin Sans", sans-serif;
+
       background-color: #F9FAFB;
       color: #333;
       line-height: 1.6;
@@ -13,7 +17,7 @@
   justify-content: space-between;
   align-items: center;
   background-color: #194592;
-  padding: 10px 80px;
+  padding: 0px 80px;
   color: white;
   position: sticky;
   top: 0;
@@ -21,7 +25,7 @@
 }
 
 .logo {
-  height: 50px;
+
   width: 50px;
   border-radius: 50%;
 }
@@ -42,6 +46,12 @@
 .nav-links a:hover {
   color:#0593d4;
 }
+.nav-links h1 {
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+}
+
 
 .btn {
   display: flex;
