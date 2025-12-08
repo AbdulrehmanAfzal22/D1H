@@ -194,7 +194,7 @@ body {
 
 
 .card {
-  background: linear-gradient(145deg, #5d79d3, #194592);
+  background: #194592;
   border-radius: 20px;
   width: 350px;
   height: 420px;
@@ -211,6 +211,8 @@ body {
 
 
 .card:hover {
+
+
   transform: translateY(-15px); 
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2); 
   opacity: 0.95; 
@@ -225,7 +227,7 @@ body {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-
+ 
 .card:hover img {
   transform: scale(1.1); 
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25); 
@@ -241,12 +243,12 @@ body {
   transition: color 0.3s ease;
 }
 
-/* Heading Hover Effect */
+
 .card:hover h2 {
-  color: #000000; 
+  color: #ffffff; 
 }
 
-/* Responsive Design */
+
 @media (max-width: 768px) {
   .cards {
     gap: 20px;
@@ -807,6 +809,8 @@ button:hover,
   transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
 .card:hover, .card1:hover {
+    background: linear-gradient(145deg, #5d79d3, #194592);
+
   transform: translateY(-8px);
   box-shadow: 0 15px 28px rgba(0, 0, 0, 0.18);
 }

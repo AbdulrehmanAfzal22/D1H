@@ -803,12 +803,12 @@ html {
 
 .prev {
   left: 10px;
-  transform: translateY(-50%);
+  /* transform: translateY(-50%); */
 }
 
 .next {
   right: 10px;
-  transform: translateY(-50%);
+  /* transform: translateY(-50%); */
 }
 
   .slider-container button:hover {
