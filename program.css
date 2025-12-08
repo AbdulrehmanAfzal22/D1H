@@ -181,7 +181,7 @@ body {
 
 .welfare-left {
   
-  background: url('Denali-peak-center-Alaska-Range-North-America.webp') center/cover no-repeat;
+  background: url('health\'.png') center/cover no-repeat;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -196,7 +196,7 @@ body {
 
 .welfare-left h2 {
   font-size: 1.8rem;
-  color: #111e34;
+  color: #ffffff;
 }
 
 .welfare-right {
