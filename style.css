@@ -249,21 +249,6 @@ body {
 }
 
 
-@media (max-width: 768px) {
-  .cards {
-    gap: 20px;
-  }
-
-  .card {
-    width: 90%; 
-    height: 380px;
-  }
-
-  .heading {
-    font-size: 2.5rem; 
-  }
-}
-
 
 .menu1 {
     display: flex;
@@ -397,7 +382,7 @@ color: #194592;
   display: flex;
   flex-direction: column;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 5s ease;
 }
 
 .card1:hover {
@@ -814,12 +799,7 @@ button:hover,
   transform: translateY(-8px);
   box-shadow: 0 15px 28px rgba(0, 0, 0, 0.18);
 }
-.card1:hover {
-  
 
-  transform: translateY(-8px);
-  box-shadow: 0 15px 28px rgba(0, 0, 0, 0.18);
-}
 nav ul a li {
   position: relative;
 }
@@ -1014,4 +994,374 @@ html {
     color: #ffffff;
     font-weight: 700;
 
+}
+
+.card1:hover {
+  transform: rotateY(10deg) rotateX(5deg) translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ================= FIX TEXT BREAKING AND ALIGNMENT ================= */
+
+/* Prevent text overflow */
+* {
+  word-wrap: break-word;
+  hyphens: auto;
+}
+
+/* Ensure headings and paragraph text do not break awkwardly */
+.heading, .heading1,
+.card h2,
+.card1-content h3,
+.card1-content p,
+.com-text h1,
+.com-text p,
+.join-content h2,
+.join-content p {
+  word-break: keep-all;
+  line-height: 1.3;
+}
+
+/* Flex containers adjustments */
+.cards, .sec, .com, .join-us {
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Card and card1 min widths */
+.card, .card1 {
+  min-width: 250px;
+  max-width: 100%;
+}
+
+/* Card1 content adjustments */
+.card1-content {
+  word-wrap: break-word;
+  text-align: center;
+  flex: 1;
+}
+
+/* COM Section */
+.com-text, .join-content, .join-img {
+  flex: 1 1 280px;
+  min-width: 250px;
+}
+
+/* Hero text */
+.hero-text {
+  max-width: 90%;
+  padding: 0 15px;
+  text-align: center;
+}
+
+/* Footer adjustments */
+.footer-container {
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  align-items: flex-start;
+  text-align: center;
+}
+
+/* Small devices adjustments */
+@media (max-width: 992px) {
+  .card, .card1 {
+    width: 48%;
+  }
+  .card1-content h3 {
+    font-size: 1rem;
+  }
+  .card1-content p {
+    font-size: 0.85rem;
+  }
+  .com-text h1, .com-text p, .join-content h2, .join-content p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .cards, .sec, .com, .join-us {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 0 10px;
+  }
+  .card, .card1, .com-text, .join-content, .join-img {
+    width: 95%;
+    min-width: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-text h1 { font-size: 1.4rem; }
+  .hero-text p { font-size: 0.75rem; }
+  .card h2 { font-size: 1rem; }
+  .card1-content h3 { font-size: 0.95rem; }
+  .card1-content p { font-size: 0.85rem; }
+  .com-text h1, .join-content h2 { font-size: 1.2rem; }
+  .com-text p, .join-content p { font-size: 0.9rem; }
+  .card, .card1 { width: 95%; }
+}
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 1024px) {
+  .hero {
+    height: 60vh;
+  }
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+  .hero-text p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    height: 50vh;
+  }
+  .hero-text h1 {
+    font-size: 1.6rem;
+  }
+  .hero-text p {
+    font-size: 0.9rem;
+  }
+  .hero img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+/* Cards Section */
+@media (max-width: 992px) {
+  .cards {
+    gap: 20px;
+  }
+  .card {
+    width: 45%;
+  }
+}
+
+@media (max-width: 768px) {
+  .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+  .card {
+    width: 90%;
+    height: auto;
+  }
+}
+
+/* Card1 Section */
+@media (max-width: 992px) {
+  .sec {
+    gap: 15px;
+  }
+  .card1 {
+    width: 45%;
+  }
+}
+
+@media (max-width: 768px) {
+  .sec {
+    flex-direction: column;
+    align-items: center;
+  }
+  .card1 {
+    width: 90%;
+    height: auto;
+  }
+  .card1-content h3 {
+    font-size: 1rem;
+  }
+  .card1-content p {
+    font-size: 0.85rem;
+  }
+}
+
+/* COM Section */
+@media (max-width: 992px) {
+  .com {
+    flex-direction: column;
+    gap: 30px;
+    padding: 20px;
+  }
+  .com-image img {
+    width: 100%;
+    max-width: 400px;
+  }
+  .com-text h1 {
+    font-size: 1.4rem;
+    line-height: 1.3;
+  }
+  .contact-info p {
+    font-size: 1rem;
+    justify-content: center;
+  }
+}
+
+/* Join Us Section */
+@media (max-width: 992px) {
+  .join-us {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 10%;
+  }
+  .join-content h2 {
+    font-size: 2rem;
+  }
+  .join-content p {
+    font-size: 1rem;
+  }
+  .join-img img {
+    width: 100%;
+    max-width: 350px;
+  }
+}
+
+/* Footer */
+@media (max-width: 900px) {
+  .footer-container {
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
+  }
+  .footer-logo {
+    grid-column: span 2;
+    text-align: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+  }
+  .footer-logo {
+    grid-column: auto;
+  }
+}
+
+/* Navigation adjustments */
+@media (max-width: 768px) {
+  .nav-links {
+    padding: 10px 20px;
+  }
+  .nav-links ul {
+    display: none;
+    flex-direction: column;
+    background: #194592;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+  }
+  .nav-links ul.active {
+    display: flex;
+  }
+  .hamburger {
+    display: block;
+  }
+  .btn {
+    display: none;
+  }
+  .nav-links ul a {
+    font-size: 1.1rem;
+    padding: 10px 0;
+  }
+}
+
+/* Hero text and buttons for small devices */
+@media (max-width: 480px) {
+  .hero-text h1 {
+    font-size: 1.4rem;
+  }
+  .hero-text p {
+    font-size: 0.75rem;
+  }
+  .card {
+    width: 100%;
+  }
+  .card1 {
+    width: 95%;
+  }
+  .sec {
+    gap: 15px;
+  }
+  .join-content h2 {
+    font-size: 1.6rem;
+  }
+  .join-content p {
+    font-size: 0.9rem;
+  }
+  .com-text h1 {
+    font-size: 1.2rem;
+  }
 }
